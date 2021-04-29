@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./index.css"><title>Document</title>
 </head>
-<body>
-    
-   <script src="./index.js"></script> 
+<body class="body-container">
+    <div class="main-container">
+        <div class="main-heading">
+            <div class="heading1"><strong>Tasks </strong>List</div>
+            <div class="add-list">
+                <button class="heading2">&#43;</button>
+                <div class="heading3"> &nbsp;Add Item</div>
+            </div>
+        </div>
+        <div class="added-items">
+            <div>No Items in the todo list</div>
+        </div>
+    </div>
+    <div class="pop-up-container">
+        <div class="card-box">
+            <div class="top-heading"><strong>Add New List</strong></div>
+            <div class="text-box" aria-placeholder="enter your text"></div>
+            <button class="btn">Add </button> 
+            <button class="btn">Close</button>
+        </div>
+    </div>
+   <script>
+        var iconPopUp = document.querySelector(".heading2")
+        iconPopUp.addEventListener("click",()=>{
+        document.querySelector(".card-box").style.visibility="visible";
+        document.querySelector(".main-container").style.filter="blur(6px)";
+    })      
+   </script> 
 </body>
 </html>
