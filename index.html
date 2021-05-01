@@ -4,35 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css"><title>Document</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d65e853b8d.js" crossorigin="anonymous"></script>
 </head>
-<body class="body-container">
-    <div class="main-container">
-        <div class="main-heading">
-            <div class="heading1"><strong>Tasks </strong>List</div>
-            <div class="add-list">
-                <button class="heading2">&#43;</button>
-                <div class="heading3"> &nbsp;Add Item</div>
-            </div>
+<body>
+    <div class="container">
+        <div class="flex-row">
+            <p class="heading-bold">Tasks <span class="heading-thin">List</span></p>
+            <p class="btn"><i class="fa fa-plus-circle"></i> <span class='addItem'>Add Item</span></p>
         </div>
-        <div class="added-items">
-            <div>No Items in the todo list</div>
+        <div class="flex-row-list"></div>
+        <div class="notodo">No Items in the todo list</div>
+    </div>
+    <div>
+    </div>
+    <form class="flex-column popup" id="formAddName">
+        <div>
+            <p class="popup-text">Add New List</p>
+        </div>
+         <div>
+         	<input type="text" id="firstName" placeholder="Add New List" name="firstName" />
+         </div>
+      	 <div>
+            <button class="addBtn" onclick="addTodo()">Add</button>
+            <button class="closeBtn" onclick="toggle()">Close</button>
+      	 </div>
+    </form>
+    <ol id="demo"></ol>
+
+    <div class="flex-column popup" id="popAddItem">
+        <div>
+            <p class="popup-text">Add New Item</p>
+        </div>
+        <div>
+            <input type="text" id='subListHeading' placeholder="Add New Item">
+        </div>
+        <div>
+            <button onclick="
+                addSubTodo()">Add</button>
+            <button onclick="toggleAddItem()">Close</button>
         </div>
     </div>
-    <div class="pop-up-container">
-        <div class="card-box">
-            <div class="top-heading"><strong>Add New List</strong></div>
-            <div class="text-box" aria-placeholder="enter your text"></div>
-            <button class="btn">Add </button> 
-            <button class="btn">Close</button>
-        </div>
-    </div>
-   <script>
-        var iconPopUp = document.querySelector(".heading2")
-        iconPopUp.addEventListener("click",()=>{
-        document.querySelector(".card-box").style.visibility="visible";
-        document.querySelector(".main-container").style.filter="blur(6px)";
-    })      
+    <script src="./index.js">
    </script> 
 </body>
 </html>
