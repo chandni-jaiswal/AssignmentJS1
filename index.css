@@ -33,11 +33,17 @@ body {
     color: #4b8ce8;
     cursor: pointer;
   }
+  .fa-chevron-circle-left{
+    color: blue;
+  }
+  .fa-trash{
+    background-color: orangered;
+  }
   
   .fa-check {
     font-size: 14px;
-    color: rgb(160, 0, 0);
     cursor: pointer;
+    color: rgb(160, 0, 0);
   }
   
   .card {
@@ -54,6 +60,12 @@ body {
     flex-direction: column;
     justify-content: space-between;
   }
+  .card:hover{
+    transform: scale(1.05,1.05);
+    box-shadow: 4px 4px 10px rgb(255,255,255);
+    background-color: rgb(186, 253, 233);
+    border: 3px solid rgb(236, 163, 245);
+}
   
   .card-2 {
     min-height: 355px;
@@ -69,6 +81,12 @@ body {
     flex-direction: column;
     justify-content: space-between;
   }
+  .card-2:hover{
+    transform: scale(1.05,1.05);
+    box-shadow: 4px 4px 10px rgb(255,255,255);
+    background-color: rgb(186, 253, 233);
+    border: 3px solid rgb(236, 163, 245);
+}
   
   .markDone {
     font-size: 10px;
@@ -76,14 +94,23 @@ body {
     width: auto;
     background-color: #4b8ce8;
   }
+  .markDone:hover{
+    background-color:#051e42;
+  }
   
   .card-heading {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 0.7em;
-    color: #e74c3c;
+    font-size: 0.8em;
+    color: orangered;
+    font-weight: 400;
     margin-bottom: 0px;
     position: relative;
   }
+
+  .card-heading:hover{
+    cursor: pointer;
+    font-weight: 900;
+}
   
   .card-heading::after {
     content: "";
@@ -195,6 +222,10 @@ body {
     opacity: 1;
     text-align: center;
   }
+  input:hover{
+    box-shadow: 3px 3px 3px rgb(255);
+    border: 1px solid rgb(236, 163, 245);
+  }
   
   button {
     width: 101px;
@@ -208,10 +239,12 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 10px;
     cursor: pointer;
+    transition: 500ms
   }
   
   .btn {
     cursor: pointer;
+    transition: 500ms;
   }
   
   .footer {
@@ -248,6 +281,12 @@ body {
     visibility: visible;
     transition: 0.5s;
   }
+  #pop:hover{
+    transform: scale(1.05,1.05);
+    box-shadow: -4px -4px 10px 2px rgb(255,255,255);
+    background-color: rgb(186, 253, 233);
+    border: 3px solid rgb(236, 163, 245);
+}
   
   #popAddItem.active {
     top: 30%;
@@ -276,6 +315,12 @@ body {
       width: 100%;
       border: 1px solid #ccc9c9;
     }
+    .card:hover{
+      transform: scale(1.05,1.05);
+      box-shadow: 4px 4px 10px rgb(255,255,255);
+      background-color: rgb(186, 253, 233);
+      border: 3px solid rgb(236, 163, 245);
+  }
     .card-item {
       display: none;
     }
@@ -303,13 +348,26 @@ body {
       left: 10%;
       width: 300px;
       height: 200px;
+      cursor: pointer;
     }
+    .popup:hover{
+      transform: scale(1.05,1.05);
+      box-shadow: 4px 4px 10px rgb(255,255,255);
+      background-color: rgb(186, 253, 233);
+      border: 3px solid rgb(236, 163, 245);
+  }
     .popup-text {
       font-size: 20px;
       font-weight: 400;
       color: #ff0000;
       margin: 10px;
     }
+    .popup-text:hover{
+      transform: scale(1.05,1.05);
+      box-shadow: 4px 4px 10px rgb(255,255,255);
+      background-color: rgb(186, 253, 233);
+      border: 3px solid rgb(236, 163, 245);
+  }
   
     button {
       width: 60px;
@@ -322,5 +380,6 @@ body {
     }
     #currentHeading {
       font-size: 28px;
+      
     }
   }
