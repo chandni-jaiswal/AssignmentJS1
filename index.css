@@ -102,14 +102,13 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 0.8em;
     color: orangered;
-    font-weight: 400;
+    font-weight: 900;
     margin-bottom: 0px;
     position: relative;
   }
 
   .card-heading:hover{
     cursor: pointer;
-    font-weight: 900;
 }
   
   .card-heading::after {
@@ -333,9 +332,11 @@ body {
     .card-heading {
       font-size: 25px;
       height: 10px;
+      font-weight: 900;
       cursor: pointer;
-      color: #6a6a72;
+      color: orangered;
       justify-content: flex-start;
+      cursor: pointer;
       text-align: center;
     }
     .card-heading::after {
